@@ -1,0 +1,47 @@
+/* header styles */
+
+.app-header {
+    height: 75px;
+    display: grid;
+    grid-template-rows: 60px 5px 10px;
+  }
+  
+  .app-header > title {
+    font-size: 36px;
+    grid-row:  1;
+    background-color: #262626;
+    box-shadow: 0px 2px 4px #1a1a1a;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .app-header > title > a {
+    color: #d8d4cf;
+    text-decoration: none;
+    cursor: pointer;
+    margin: auto;
+    transform: translate(0px, -12px);
+  }
+  
+  
+  .app-header > title > a > img {
+    position: relative;
+    top: 12px;
+    left: -5px;
+    height: 55px;
+  
+  }
+  
+  .app-header > small {
+    grid-row: 3;
+    margin:auto;
+    font-size: 14px;
+    opacity: .5;
+  }
+  
+  @media only screen and (max-width: 1100px) {
+    .app-header > small {
+      max-width: 300px;
+    }
+  }

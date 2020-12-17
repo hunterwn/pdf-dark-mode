@@ -1,0 +1,113 @@
+/*main panel styles*/
+
+.main-panel {
+  width: 100%;
+  height: 400px;
+  padding-top: 50px;
+}
+
+#customUpload {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  border-radius: 3px;
+  background-color: #222222;
+  transition: background-color 0.1s;
+  box-shadow: inset 0px 2px 5px 0 #181a1a;
+  display: grid;
+  grid-template-rows: 200px 25px 75px;
+}
+
+#customUpload:hover {
+  background-color: #242424;
+}
+
+/*psuedo element for bg image*/
+:root {
+  --background-pos: 50% 15%;
+  --opacity: 0.65;
+}
+
+#customUpload::before {
+  overflow: hidden;
+  content: "";
+  background-image: url("PDF_icon_bright.svg");
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: var(--background-pos);
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: var(--opacity);
+  transition: all 0.4s;
+}
+
+.bg-text {
+  grid-row: 2;
+  text-align: center;
+}
+
+.pages-container {
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.pdf-display-area {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  border: 1px solid #1b1b1b;
+  border-radius: 3px;
+  background-color: #222222;
+  box-shadow: inset 0px 0px 2px #0b0c0c;
+  display: grid;
+  grid-template-rows: 235px 70px;
+  text-align: center;
+}
+
+.download-text {
+  opacity: 0;
+}
+
+.pages-container > canvas {
+  margin: auto;
+  max-height: 250px;
+  max-width: 160px;
+  box-shadow: 2px 2px 5px #0b0c0c;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.dz-preview {
+  text-align: center;
+  grid-row: 3;
+}
+
+.dz-upload {
+  height: 2px;
+  display: inline-block;
+  position: relative;
+  top: 59px;
+  background-color: #d8d4cf;
+  opacity: 0.5;
+  width: 0%;
+  transition: all 0.3s;
+}
+
+.dz-error {
+  color: #d36a6a;
+}
+
+.dz-details, .dz-image, .dz-success-mark, .dz-error-mark {
+  display: none;
+}

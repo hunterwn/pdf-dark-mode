@@ -1,0 +1,103 @@
+ /*OPTIONS STYLES*/
+
+ .options {
+    display: grid;
+    grid-template-columns: 0px auto 0px;
+    text-align: center;
+  }
+  
+  .options > .options-list {
+    padding: 0% 20%;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  .options-preview {
+    position: relative;
+    margin: auto;
+    font-size: 12px;
+    cursor: default;
+    height: 215px;
+    min-width: 140px;
+    max-width: 140px;
+    padding: 0px 10px;
+    padding-top: 7px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px 0 #161818;
+    transition: all 0.3s ease, border 1ms;
+  }
+
+  .options-preview:hover {
+    transform: translate(0px, -97px);
+  }
+  
+  .options-preview > p {
+    width: 135px;
+    margin: auto;
+  }
+  
+  .selected {
+    border: 1px solid #ffffff;
+  }
+  
+  .options-nav {
+    position: relative;
+    top: -50px;
+    height: 60px;
+    width: 60px;
+    background-color: #222222;
+    box-shadow: 0px 2px 5px #0b0c0c;
+    border-radius: 2px;
+    font-size: 44px;
+    transition: all 10ms;
+  }
+  
+  .options-nav:hover {
+    color: #f7f3f0;
+    box-shadow: 0px 5px 10px #0b0c0c;
+    background-color: #2d2d2d;
+  }
+  
+  .options-nav:active {
+    top: -49px;
+    box-shadow: 0px 2px 5px #0b0c0c;
+  }
+  
+  .options-nav > p {
+    margin: auto;
+    user-select: none;
+  }
+  
+  #optionsNavLeft {
+    left: 10px;
+    padding-right: 5px;
+  }
+  
+  #optionsNavRight {
+    position: relative;
+    right: 70px;
+    padding-left: 5px;
+  }
+  
+  @media only screen and (min-width: 1100px) {
+    .options-nav {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 1100px) {
+    .options > .options-list {
+      padding: 0%;
+    }
+    .options-preview {
+      min-width: 86px;
+      max-width: 140px;
+      box-shadow: 0px 2px 8px #0b0c0c;
+    }
+    .options-preview:hover {
+      transition: none;
+      transform: none;
+    }
+  }

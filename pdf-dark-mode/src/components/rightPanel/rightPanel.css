@@ -1,0 +1,51 @@
+.store-links-list {
+    padding-left: 0px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-rows: repeat(3, 75px);
+}
+
+.store-links-list > li {
+    display: grid;
+    grid-template-columns: minmax(15px, auto) minmax(120px, 300px) minmax(15px, auto);
+}
+
+.store-link {
+    overflow: hidden;
+    grid-column: 2;
+    max-width: 295px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 50px minmax(165px, auto);
+    background-color: #303030;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #1b1b1b;
+}
+
+.store-link > .text {
+    align-self: center;
+    padding-left: 5px;
+    padding-right: 8px;
+}
+
+.store-link > .logo {
+    margin: auto;
+    overflow: hidden;
+    padding-left: 2px;
+    max-height: 40px;
+    max-width: 40px;
+}
+
+#chromeExtension > .logo > img {
+    height: 40px;
+}
+
+#firefoxAddon > .logo > img {
+    height: 60px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+#desktopVersion > .logo > img {
+    width: 40px;
+}
